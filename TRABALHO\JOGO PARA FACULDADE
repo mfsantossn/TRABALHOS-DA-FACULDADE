@@ -1,0 +1,61 @@
+
+// MARLLYSON FARIAS DOS SANTOS - 202203310641
+
+#include <iostream>
+#include <stdio.h>
+#include<locale.h>
+#include <stdlib.h>  
+#include<time.h>
+
+ 
+int main (){ 
+    int num, sorteio, tentativas=0;
+    char c;         
+    srand(time(NULL));
+    sorteio = rand () % 101; 
+
+do {
+	int sorteio = rand () % 100;
+	
+	printf("\nJOGO DE ADIVINHA\n");
+	printf("tente adivinhar o numero de 0 a 100\n");
+	
+	for(tentativas=1 ; tentativas <= 7 ; tentativas++){
+  
+    printf("\n\nTentativas numero %d ", tentativas);
+    printf("\nQual seu chute ?:");
+    scanf("%d",&num);
+    
+   if(num==sorteio){
+        printf("\nvoce acertou, parabens\n");
+     break ;
+} 
+
+    if(num<sorteio){
+   printf("\n\nerrou, o numero sorteado e maior do que seu chute ");
+    
+}
+   else{
+
+      printf("\nErrou, o numero sorteado e menor do que seu chute");
+    } 
+    
+}
+
+ if (tentativas>7) {
+    printf("\n\nvoce nao conseguiu :( ,  mas pode tentar novamente!");
+    printf("\nO numero sorteado era: %d", sorteio);
+
+}
+    printf("\nquer tentar de novo ?");
+    printf("\n\n digite S para sim, e N para nao");
+    printf("\n\n S/N ");
+    fflush(stdin);
+    scanf("\n%c", &c);
+
+
+    }while(c=='s' || c=='S');
+    
+    return 0;
+
+}
