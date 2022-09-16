@@ -1,32 +1,49 @@
-# Prerequisites
-*.d
+#include <iostream>
+using namespace std;
+int main(){
+int d384, c12, ct32, v8, p12, vc10;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+/*int distancia d384;
+int comsumo c12;
+int capacidade tanque ct32;
+int valor combustivel v8;
+int paradas para reabastecer p12;
+int valor combustivel;*/
 
-# Precompiled Headers
-*.gch
-*.pch
+printf("qual distancia percorrida\n");
+scanf("%d", &d384);
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+printf("Qual consumo de combustivel\n");
+scanf("%d", &c12);
 
-# Fortran module files
-*.mod
-*.smod
+printf("Qual a capacidade do tanque\n");
+scanf("%d", &ct32);
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+printf("Qual valor do combustivel\n");
+scanf("%d", &vc10);
 
-# Executables
-*.exe
-*.out
-*.app
+printf("Quantas paradas para reabastecer\n");
+scanf("%d", &p12);
+
+printf("\nCapacidade do tanque e igual:");
+
+printf("\nDistancia percorrida (DIVIDIDO) pelo Consumo de combustivel");
+
+printf("\n\nDivisao: %d", (d384 / c12));
+
+
+printf("\n\nSera necessario %d litros para completar a viagem.",c12);
+
+printf("\n\nSera necessario %d paradas para reabastecer o tanque por completo.",p12);
+
+
+printf("\n\nO valor total gasto com combustivel sera de %d Reais.",vc10);
+
+
+printf("\n\nPara calcular o valor do combustivel,deve ser feito o calculo entre:");
+
+printf("\n\nCAPACIDADE DO TANQUE (VEZES) VALOR DO COMBUSTIVEL");
+
+
+printf("\n\nValor da Multiplicacao: %d", (ct32 * v8)); 
+}
